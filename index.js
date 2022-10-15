@@ -12,5 +12,33 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map(function(words){
+    let splitWord = words.split(' ')
+    let titleCaseArray = splitWord.map((word) => {
+      return word[0].toUpperCase() + word.slice(1)
+    })
+    let titleCaseSentence = titleCaseArray.join(' ')
+    return titleCaseSentence;
+    
+  })
+
+  
 }
+
+// const titelCased = () => {
+//   return tutorials.map(function(words){
+//     let newTutorial = words.split(' ')
+//     return newTutorial
+//   })
+// }
+
+// const titleCased = () => {
+// const testSentence = "C++ is  better";
+// const words = testSentence.split(" ");
+
+//   words.map((word) => { 
+//       return word[0].toUpperCase() + word.substring(1); 
+//   }).join(" ");
+// }
+
+
